@@ -6,19 +6,37 @@
     <title>Document</title>
     <script src="script.js" defer></script>
     <style>
-        body{
+        #content-container{
             display:flex;
-            justify-content: center;
+            justify-content:center;
         }
         #content{
             display:flex;
+            height:500px;
+            width:500px;
+            border: black solid 8px;
+        }
+        .container{
+            display:flex;
+            flex-direction:column;
+            flex-grow:1;
         }
         .new{
             border: black solid 1px;
+            min-width: 2px;
+            min-height: 2px;
             margin: 0px;
             padding: 0px;
-            height: 30px;
-            width: 30px;
+            flex-grow: 1;
+        }
+        .button-container{
+            display:flex;
+            justify-content:center;
+        }
+        #button{
+            margin-bottom:10px;
+            height:30px;
+            width:150px;
         }
         
 
@@ -26,9 +44,11 @@
 
 </head>
 <body>
-    <button id="button">Number of divs</button>
+   <div class="button-container"><button id="button">Number of divs</button></div>
+   <div id="content-container">
     <div id="content">
 
     </div>
+   </div>
 </body>
 </html>
