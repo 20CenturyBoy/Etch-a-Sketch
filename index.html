@@ -29,7 +29,7 @@
             padding: 0px;
             flex-grow: 1;
         }
-        .button-container{
+        .button-container, .select-container, .header-container{
             display:flex;
             justify-content:center;
         }
@@ -45,6 +45,15 @@
 </head>
 <body>
    <div class="button-container"><button id="button">Number of divs</button></div>
+   <div class="header-container"><span>Pick a color<span></div>
+   <div class="select-container">
+    <select id="select">
+        <option value="black">Black</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="red">Red</option>
+    </select>
+   </div>
    <div id="content-container">
     <div id="content">
 

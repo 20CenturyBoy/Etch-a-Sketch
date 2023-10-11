@@ -11,7 +11,7 @@ function generateSketchpad(n)
             const div = document.createElement('div');
             div.classList.add('new');
             div.addEventListener('mouseover',() => {
-                div.style.backgroundColor= 'black';
+                div.style.backgroundColor = squreColor;
             })                      
             container.appendChild(div);
         }
@@ -19,6 +19,7 @@ function generateSketchpad(n)
     }
 }
 
+let squreColor = 'black'
 let n = 16  ;
 generateSketchpad(n);
 
@@ -33,5 +34,13 @@ button.addEventListener('click',() => {
     let n = prompt("How many squares would you like in new sketchpad?")
     generateSketchpad(n);
 
-})
+});
+
+const select = document.querySelector('select');
+select.addEventListener('change',(e) => {
+    squreColor = e.target.value ;
+});
+
+
+
 
